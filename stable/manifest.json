@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.7.1",
+ "version": "1.7.2",
  "channel": "stable",
- "date": "2026-11-13T14:05:43",
- "notes": "- لما يكون في تحديث بيطلع شريط فوق باللوحة: اضغط \"تحديث الآن\" وبيتحدّث\n- اللوحة بتفحص التحديثات لحالها كل 3 ساعات",
+ "date": "2026-11-13T15:55:04",
+ "notes": "- إلغاء مفاتيح التوقيع: التحديث بيتحقق من بصمة الملف وبينزل من GitHub مباشرة، وما في شي ممكن يضيع ويوقّف التحديثات",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.7.1/Starbond-1.7.1.tar.gz",
-   "sha256": "3e23a22619c99223ef1b5cb65d1fd8e2d1fc5577bd2d8510b9fd63deb8e8d887",
-   "size": 77293
+   "file": "releases/1.7.2/Starbond-1.7.2.tar.gz",
+   "sha256": "35335eccd13577c2cbfcdabedc07fdc8734fa21ee62dfad80565137d6fe9f84a",
+   "size": 76975
   }
  },
  "setup": {
-  "file": "releases/1.7.1/Starbond-1.7.1-setup.tar.gz",
-  "sha256": "e336217ce051ca083572eea4e4bdbdbca395223e095b615be63492f6432e9346",
-  "size": 74982
+  "file": "releases/1.7.2/Starbond-1.7.2-setup.tar.gz",
+  "sha256": "aeb015f92172074fe3b0341dc7b3e43b82e0d1bd2cbbe50e9a31a301c981051e",
+  "size": 74679
  }
 }
