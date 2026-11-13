@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.8.6",
+ "version": "1.8.7",
  "channel": "beta",
- "date": "2026-11-13T20:19:14",
- "notes": "- اللوحة أسرع: تخفيف الضغط على الراوتر (فحص الخطوط ما عاد يسأل خدمة الشبكة كل 5 ثواني)\n- السجل ما عاد يمتلي بأسطر الجدولة\n- شرح أوضح لطريقة التعرّف على التطبيقات",
+ "date": "2026-11-13T20:25:41",
+ "notes": "- اللوحة أسرع بكتير: طلب الحالة صار أخف 4 مرات على الراوتر",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.8.6/Starbond-1.8.6.tar.gz",
-   "sha256": "e5c68158bfecc2c6be0627bc635feff269469d5bda4448f03c79f0b5e2310842",
-   "size": 86313
+   "file": "releases/1.8.7/Starbond-1.8.7.tar.gz",
+   "sha256": "3285d25f4b57133d1ca570319cf4c9e5c38aac43bee0d57d2836a0b56cd28b0c",
+   "size": 86733
   }
  },
  "setup": {
-  "file": "releases/1.8.6/Starbond-1.8.6-setup.tar.gz",
-  "sha256": "d1a72fcfeefe95013b518da48a4cba7c0c5881b31eef9b7753ef42e793c2fcc6",
-  "size": 83600
+  "file": "releases/1.8.7/Starbond-1.8.7-setup.tar.gz",
+  "sha256": "715bd9368b245da73c76071f5a42f1e9b659f4b5e93e1796e4c03da86aa23012",
+  "size": 84030
  }
 }
