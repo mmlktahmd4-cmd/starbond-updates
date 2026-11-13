@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.8.7",
+ "version": "1.8.8",
  "channel": "beta",
- "date": "2026-11-13T20:25:41",
- "notes": "- اللوحة أسرع بكتير: طلب الحالة صار أخف 4 مرات على الراوتر",
+ "date": "2026-11-13T20:30:13",
+ "notes": "- تطبيق موقوف: بتنمسح اتصالاته القائمة كمان (حتى اللي بالمسار السريع) فما بيضل ولا اتصال ماشي\n- عدّاد فعلي على باب الخروج: كم حزمة من التطبيق طلعت من الراوتر على كل خط",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.8.7/Starbond-1.8.7.tar.gz",
-   "sha256": "3285d25f4b57133d1ca570319cf4c9e5c38aac43bee0d57d2836a0b56cd28b0c",
-   "size": 86733
+   "file": "releases/1.8.8/Starbond-1.8.8.tar.gz",
+   "sha256": "86a3c2fc0dae3d0139f9f8262ef0dcf30ae23b5977a7102bc152344a41e74b9d",
+   "size": 87269
   }
  },
  "setup": {
-  "file": "releases/1.8.7/Starbond-1.8.7-setup.tar.gz",
-  "sha256": "715bd9368b245da73c76071f5a42f1e9b659f4b5e93e1796e4c03da86aa23012",
-  "size": 84030
+  "file": "releases/1.8.8/Starbond-1.8.8-setup.tar.gz",
+  "sha256": "c4b99e24d910fe5d2210a8e5bb303c0591469f85ba1f75aca8cba8d1037d3686",
+  "size": 84566
  }
 }
