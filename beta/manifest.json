@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.8.4",
+ "version": "1.8.5",
  "channel": "beta",
- "date": "2026-11-13T20:02:02",
- "notes": "- خط لكل تطبيق: خيار «يوقف التطبيق لحد ما يرجع خطه»، وتسميات أوضح",
+ "date": "2026-11-13T20:09:46",
+ "notes": "- التطبيق الموقوف: عدّاد فعلي للحزم اللي انمنعت\n- التشخيص بيعرض قواعد الدمج كاملة وسجل Starbond\n- التحديثات بتوصل فوراً (بدون انتظار كاش GitHub)",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.8.4/Starbond-1.8.4.tar.gz",
-   "sha256": "4f98b7123ebf58e1155a929b3415ee42e174494a16563efe63d7f74303699543",
-   "size": 85102
+   "file": "releases/1.8.5/Starbond-1.8.5.tar.gz",
+   "sha256": "9ddc4d5b4830786130d54569f0e6659af77762cbee9b978a30d53d0f96040cdc",
+   "size": 85656
   }
  },
  "setup": {
-  "file": "releases/1.8.4/Starbond-1.8.4-setup.tar.gz",
-  "sha256": "1c609672adffae5a25a2b3e0f87009a92e319eb914f043fc38afa9d32b404508",
-  "size": 82436
+  "file": "releases/1.8.5/Starbond-1.8.5-setup.tar.gz",
+  "sha256": "68ab438064ccd9287aacb4018c79d4091f2659b8267115723265fb20cca017d3",
+  "size": 82984
  }
 }
