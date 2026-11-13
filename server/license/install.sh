@@ -1,7 +1,8 @@
 #!/bin/bash
 # تركيب خدمة تراخيص Starbond على سيرفر RouterX (نفس الـ VPS، جنب Gerd بدون ما يلمسه)
 #   curl -fsSL https://raw.githubusercontent.com/mmlktahmd4-cmd/starbond-updates/main/server/license/install.sh | sudo bash
-set -euo pipefail
+set -eu
+main() {
 SRC="https://raw.githubusercontent.com/mmlktahmd4-cmd/starbond-updates/main/server/license"
 DIR=/opt/starbond-license
 NGINX_DIR=${NGINX_DIR:-/opt/gerd/nginx}
@@ -14,7 +15,7 @@ for f in app.py admin.html Dockerfile docker-compose.yml nginx-location.conf; do
 done
 
 if [ ! -f "$DIR/.env" ]; then
-	PW=$(tr -dc 'A-Za-z0-9' </dev/urandom | head -c 20)
+	PW=$(od -An -N15 -tx1 /dev/urandom | tr -d ' \n')
 	printf 'ADMIN_PASSWORD=%s\nTRIAL_DAYS=3\n' "$PW" > "$DIR/.env"
 	chmod 600 "$DIR/.env"
 	NEWPW=$PW
@@ -63,3 +64,5 @@ if [ -n "${NEWPW:-}" ]; then
 	echo "  كلمة السر:   $NEWPW     ← احفظها هلق (موجودة كمان بـ $DIR/.env)"
 fi
 echo "  نسخ احتياطي للتراخيص: $DIR/data/licenses.db"
+}
+main "$@" </dev/null
