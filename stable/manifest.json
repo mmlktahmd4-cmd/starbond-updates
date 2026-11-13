@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.7.0",
+ "version": "1.7.1",
  "channel": "stable",
- "date": "2026-11-13T13:55:11",
- "notes": "Starbond 1.7.0\n- خط لكل تطبيق: واتساب، ببجي، تيليجرام، فحص السرعة، وتطبيقات مخصّصة\n- فحص السرعة: اسم المزوّد من الخط اللي بتختاره والسرعة تضل مدموجة\n- التحديث التلقائي من GitHub مع توقيع رقمي ورجوع تلقائي إذا فشل\n- دعم RB5009 وكل المنافذ كخطوط",
+ "date": "2026-11-13T14:05:43",
+ "notes": "- لما يكون في تحديث بيطلع شريط فوق باللوحة: اضغط \"تحديث الآن\" وبيتحدّث\n- اللوحة بتفحص التحديثات لحالها كل 3 ساعات",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.7.0/Starbond-1.7.0.tar.gz",
-   "sha256": "0dd38f043f97247b4ce2e66f07cc1e0b739e0eb15a84e79a77582905d8ba46f1",
-   "size": 76659
+   "file": "releases/1.7.1/Starbond-1.7.1.tar.gz",
+   "sha256": "3e23a22619c99223ef1b5cb65d1fd8e2d1fc5577bd2d8510b9fd63deb8e8d887",
+   "size": 77293
   }
  },
  "setup": {
-  "file": "releases/1.7.0/Starbond-1.7.0-setup.tar.gz",
-  "sha256": "161f1f8c38266714a081fc26a305a8bb8c660626e75fe9db9c09033141f151f4",
-  "size": 74354
+  "file": "releases/1.7.1/Starbond-1.7.1-setup.tar.gz",
+  "sha256": "e336217ce051ca083572eea4e4bdbdbca395223e095b615be63492f6432e9346",
+  "size": 74982
  }
 }
