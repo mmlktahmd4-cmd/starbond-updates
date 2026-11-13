@@ -1,0 +1,20 @@
+{
+ "product": "starbond",
+ "version": "1.8.0",
+ "channel": "beta",
+ "date": "2026-11-13T16:20:49",
+ "notes": "- ترخيص باشتراك مربوط بالجهاز، التحكم من لوحة التراخيص\n- إذا الجهاز مش مرخّص: اللوحة بتبيّن رقم الجهاز والدمج بيوقف",
+ "min_version": "",
+ "files": {
+  "default": {
+   "file": "releases/1.8.0/Starbond-1.8.0.tar.gz",
+   "sha256": "f1de6650b07b21709b279ba878c65c4c86e3c6f8c859a7f0445a5767b3e4b264",
+   "size": 81161
+  }
+ },
+ "setup": {
+  "file": "releases/1.8.0/Starbond-1.8.0-setup.tar.gz",
+  "sha256": "a5d6ce5283d3c09b19234be3fc904e436ac4ff2391ac2d75b52f6d00ad5d520a",
+  "size": 78755
+ }
+}

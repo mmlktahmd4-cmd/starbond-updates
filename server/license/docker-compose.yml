@@ -1,0 +1,15 @@
+# /opt/starbond-license/docker-compose.yml
+services:
+  starbond-lic:
+    build: .
+    container_name: starbond-lic
+    restart: unless-stopped
+    env_file: .env            # فيه ADMIN_PASSWORD=...  (لا ترفعه على GitHub)
+    volumes:
+      - ./data:/data          # قاعدة التراخيص (اعملها نسخة احتياطية)
+    networks: [gerd_net]
+
+networks:
+  gerd_net:
+    external: true
+    name: gerd_gerd_net       # نفس شبكة gerd-nginx، حتى nginx يوصل للخدمة باسم starbond-lic

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>تراخيص Starbond</title>
+<style>
+  :root { --bg:#0f1220; --card:#171b2e; --line:#2a3050; --text:#e6e8f2; --muted:#9aa0bd; --pri:#6b74ff; --ok:#3ecf8e; --warn:#f5b041; --bad:#ff6b6b; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, "Segoe UI", Tahoma, sans-serif; background:var(--bg); color:var(--text); }
+  header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 1.4rem; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  h1 { font-size:1.15rem; margin:0; }
+  main { padding:1.2rem 1.4rem; max-width:1300px; margin:auto; }
+  .kpis { display:flex; gap:.7rem; flex-wrap:wrap; margin-bottom:1rem; }
+  .kpi { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:.6rem .9rem; min-width:120px; }
+  .kpi b { display:block; font-size:1.35rem; }
+  .kpi small { color:var(--muted); }
+  input, select, button { font:inherit; color:inherit; }
+  input, select { background:#0f1326; border:1px solid var(--line); border-radius:8px; padding:.45rem .6rem; }
+  button { background:#232a48; border:1px solid var(--line); border-radius:8px; padding:.4rem .7rem; cursor:pointer; }
+  button.pri { background:var(--pri); border-color:var(--pri); color:#fff; }
+  button.bad { color:var(--bad); }
+  button:disabled { opacity:.5; cursor:default; }
+  .bar { display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:.8rem; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  th, td { padding:.55rem .6rem; border-bottom:1px solid var(--line); text-align:right; font-size:.9rem; vertical-align:middle; }
+  th { color:var(--muted); font-weight:600; background:#141831; }
+  tr:last-child td { border-bottom:0; }
+  .mono { font-family: ui-monospace, Consolas, monospace; direction:ltr; unicode-bidi:embed; }
+  .pill { display:inline-block; padding:.1rem .55rem; border-radius:99px; font-size:.78rem; border:1px solid; }
+  .active { color:var(--ok); border-color:rgba(62,207,142,.5); }
+  .trial { color:var(--pri); border-color:rgba(107,116,255,.55); }
+  .expired { color:var(--warn); border-color:rgba(245,176,65,.5); }
+  .suspended { color:var(--bad); border-color:rgba(255,107,107,.5); }
+  .muted { color:var(--muted); font-size:.8rem; }
+  .acts { display:flex; gap:.3rem; flex-wrap:wrap; }
+  #msg { min-height:1.2rem; color:var(--muted); margin:.3rem 0 .8rem; }
+  @media (max-width: 900px) { .hide-sm { display:none; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>🔐 تراخيص Starbond</h1>
+  <div class="bar" style="margin:0">
+    <input id="q" placeholder="بحث: رقم جهاز، زبون، ملاحظة..." />
+    <select id="f"><option value="">الكل</option><option value="active">مرخّص</option><option value="trial">تجربة</option><option value="expired">منتهي</option><option value="suspended">موقوف</option></select>
+    <button id="reload">تحديث</button>
+  </div>
+</header>
+<main>
+  <div class="kpis" id="kpis"></div>
+  <div class="bar">
+    <input id="newId" class="mono" placeholder="رقم جهاز جديد F4:1E:57:..." size="22" />
+    <input id="newCust" placeholder="اسم الزبون" />
+    <select id="newDays"><option value="30">شهر</option><option value="90">3 شهور</option><option value="180">6 شهور</option><option value="365">سنة</option></select>
+    <button class="pri" id="add">إضافة وتفعيل</button>
+  </div>
+  <div id="msg"></div>
+  <table>
+    <thead><tr>
+      <th>الجهاز</th><th>الزبون</th><th>الحالة</th><th>ينتهي</th><th class="hide-sm">آخر اتصال</th><th class="hide-sm">النسخة / الجهاز</th><th>إجراءات</th>
+    </tr></thead>
+    <tbody id="rows"><tr><td colspan="7" class="muted">عم يحمّل...</td></tr></tbody>
+  </table>
+</main>
+<script>
+const $ = (s) => document.querySelector(s);
+const API = location.pathname.replace(/\/admin\/?$/, "").replace(/\/$/, "") + "/api/admin/devices";
+const LBL = { active: "مرخّص", trial: "تجربة", expired: "منتهي", suspended: "موقوف" };
+let DATA = { devices: [], now: 0 };
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmtId = (id) => id.match(/../g).join(":");
+const fmtDate = (t) => t ? new Date(t * 1000).toLocaleDateString("ar-SY-u-nu-latn", { year: "numeric", month: "short", day: "numeric" }) : "—";
+function ago(t) {
+  if (!t) return "أبداً";
+  const s = DATA.now - t;
+  if (s < 120) return "هلق";
+  if (s < 3600) return `قبل ${Math.round(s / 60)} دقيقة`;
+  if (s < 86400) return `قبل ${Math.round(s / 3600)} ساعة`;
+  return `قبل ${Math.round(s / 86400)} يوم`;
+}
+async function load() {
+  const r = await fetch(API, { cache: "no-store" });
+  if (!r.ok) { $("#msg").textContent = "ما قدر يحمّل (" + r.status + ")"; return; }
+  DATA = await r.json(); render();
+}
+function render() {
+  const q = $("#q").value.trim().toLowerCase(), f = $("#f").value;
+  const c = { active: 0, trial: 0, expired: 0, suspended: 0 };
+  DATA.devices.forEach((d) => c[d.effective]++);
+  $("#kpis").innerHTML = [["الكل", DATA.devices.length], ["مرخّص", c.active], ["تجربة", c.trial], ["منتهي", c.expired], ["موقوف", c.suspended]]
+    .map(([k, v]) => `<div class="kpi"><small>${k}</small><b>${v}</b></div>`).join("");
+  const rows = DATA.devices.filter((d) => (!f || d.effective === f) &&
+    (!q || [d.id, fmtId(d.id), d.customer, d.note, d.hostname, d.last_ip].join(" ").toLowerCase().includes(q)));
+  $("#rows").innerHTML = rows.map((d) => `<tr data-id="${d.id}">
+    <td><span class="mono">${fmtId(d.id)}</span>${d.hostname ? `<div class="muted">${esc(d.hostname)}</div>` : ""}</td>
+    <td><input class="cust" value="${esc(d.customer)}" placeholder="—" size="14" />${d.note ? `<div class="muted">${esc(d.note)}</div>` : ""}</td>
+    <td><span class="pill ${d.effective}">${LBL[d.effective]}</span></td>
+    <td>${fmtDate(d.expires)}<div class="muted">${d.effective === "active" || d.effective === "trial" ? `باقي ${d.days_left} يوم` : ""}</div></td>
+    <td class="hide-sm">${ago(d.last_seen)}<div class="muted mono">${esc(d.last_ip)}</div></td>
+    <td class="hide-sm">${esc(d.version || "—")}<div class="muted">${esc(d.board || "")}</div></td>
+    <td><div class="acts">
+      <select class="days"><option value="30">شهر</option><option value="90">3 شهور</option><option value="180">6 شهور</option><option value="365">سنة</option></select>
+      <button class="pri" data-a="extend">تمديد</button>
+      ${d.status === "suspended" ? `<button data-a="resume">تشغيل</button>` : `<button data-a="suspend" class="bad">إيقاف</button>`}
+      <button data-a="delete" class="bad" title="حذف">✕</button>
+    </div></td></tr>`).join("") || `<tr><td colspan="7" class="muted">ما في أجهزة. أول ما يتصل راوتر بيطلع هون لحاله بفترة تجربة.</td></tr>`;
+}
+async function act(id, body) {
+  $("#msg").textContent = "...";
+  const r = await fetch(API + "/" + id, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const j = await r.json().catch(() => ({}));
+  $("#msg").textContent = j.ok ? "✓ تم" : (j.error || "صار خطأ");
+  if (j.ok) load();
+  return j.ok;
+}
+$("#rows").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-a]"); if (!b) return;
+  const tr = b.closest("tr"), id = tr.dataset.id, a = b.dataset.a;
+  if (a === "delete" && !confirm("حذف الجهاز " + fmtId(id) + "؟ إذا رجع اتصل بيرجع يبلّش تجربة.")) return;
+  if (a === "suspend" && !confirm("إيقاف الجهاز " + fmtId(id) + "؟ الدمج بيوقف عنده بأول فحص.")) return;
+  act(id, { action: a, days: tr.querySelector(".days").value, customer: tr.querySelector(".cust").value });
+});
+$("#rows").addEventListener("change", (e) => {
+  if (!e.target.classList.contains("cust")) return;
+  act(e.target.closest("tr").dataset.id, { action: "edit", customer: e.target.value });
+});
+$("#add").addEventListener("click", async () => {
+  const id = $("#newId").value.replace(/[^0-9a-f]/gi, "").toUpperCase();
+  if (id.length !== 12) { $("#msg").textContent = "رقم الجهاز لازم يكون 12 خانة (MAC)"; return; }
+  if (await act(id, { action: "activate", days: $("#newDays").value, customer: $("#newCust").value })) { $("#newId").value = ""; $("#newCust").value = ""; }
+});
+$("#q").addEventListener("input", render); $("#f").addEventListener("change", render); $("#reload").addEventListener("click", load);
+load(); setInterval(load, 60000);
+</script>
+</body>
+</html>
