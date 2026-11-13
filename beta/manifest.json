@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.8.3",
+ "version": "1.8.4",
  "channel": "beta",
- "date": "2026-11-13T19:53:20",
- "notes": "- خط لكل تطبيق: إذا خط التطبيق ساقط، حركته بتضل محسوبة ومعروضة على الخط اللي انتقلت عليه",
+ "date": "2026-11-13T20:02:02",
+ "notes": "- خط لكل تطبيق: خيار «يوقف التطبيق لحد ما يرجع خطه»، وتسميات أوضح",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.8.3/Starbond-1.8.3.tar.gz",
-   "sha256": "83b2dc5b0949f7f56cf53e0e9848f0c0d42e1d82a3658bc273cc5ce776289f11",
-   "size": 84784
+   "file": "releases/1.8.4/Starbond-1.8.4.tar.gz",
+   "sha256": "4f98b7123ebf58e1155a929b3415ee42e174494a16563efe63d7f74303699543",
+   "size": 85102
   }
  },
  "setup": {
-  "file": "releases/1.8.3/Starbond-1.8.3-setup.tar.gz",
-  "sha256": "6aa46c89419826f46004144715df5bf740c947c1c8e38fcaa1e6457a32f9c92a",
-  "size": 82124
+  "file": "releases/1.8.4/Starbond-1.8.4-setup.tar.gz",
+  "sha256": "1c609672adffae5a25a2b3e0f87009a92e319eb914f043fc38afa9d32b404508",
+  "size": 82436
  }
 }
