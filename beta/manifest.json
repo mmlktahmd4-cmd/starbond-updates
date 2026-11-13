@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.8.5",
+ "version": "1.8.6",
  "channel": "beta",
- "date": "2026-11-13T20:09:46",
- "notes": "- التطبيق الموقوف: عدّاد فعلي للحزم اللي انمنعت\n- التشخيص بيعرض قواعد الدمج كاملة وسجل Starbond\n- التحديثات بتوصل فوراً (بدون انتظار كاش GitHub)",
+ "date": "2026-11-13T20:19:14",
+ "notes": "- اللوحة أسرع: تخفيف الضغط على الراوتر (فحص الخطوط ما عاد يسأل خدمة الشبكة كل 5 ثواني)\n- السجل ما عاد يمتلي بأسطر الجدولة\n- شرح أوضح لطريقة التعرّف على التطبيقات",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.8.5/Starbond-1.8.5.tar.gz",
-   "sha256": "9ddc4d5b4830786130d54569f0e6659af77762cbee9b978a30d53d0f96040cdc",
-   "size": 85656
+   "file": "releases/1.8.6/Starbond-1.8.6.tar.gz",
+   "sha256": "e5c68158bfecc2c6be0627bc635feff269469d5bda4448f03c79f0b5e2310842",
+   "size": 86313
   }
  },
  "setup": {
-  "file": "releases/1.8.5/Starbond-1.8.5-setup.tar.gz",
-  "sha256": "68ab438064ccd9287aacb4018c79d4091f2659b8267115723265fb20cca017d3",
-  "size": 82984
+  "file": "releases/1.8.6/Starbond-1.8.6-setup.tar.gz",
+  "sha256": "d1a72fcfeefe95013b518da48a4cba7c0c5881b31eef9b7753ef42e793c2fcc6",
+  "size": 83600
  }
 }
