@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.8.2",
+ "version": "1.8.3",
  "channel": "beta",
- "date": "2026-11-13T19:50:51",
- "notes": "- خط لكل تطبيق: حركة فعلية مباشرة لكل تطبيق (عدد الاتصالات والسرعة على كل خط) من جدول اتصالات الراوتر",
+ "date": "2026-11-13T19:53:20",
+ "notes": "- خط لكل تطبيق: إذا خط التطبيق ساقط، حركته بتضل محسوبة ومعروضة على الخط اللي انتقلت عليه",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.8.2/Starbond-1.8.2.tar.gz",
-   "sha256": "8d3b375b3c1945eda0d8bc56e32d010c1baf3879f393e4b186a1ce22fcbf7ca2",
-   "size": 84464
+   "file": "releases/1.8.3/Starbond-1.8.3.tar.gz",
+   "sha256": "83b2dc5b0949f7f56cf53e0e9848f0c0d42e1d82a3658bc273cc5ce776289f11",
+   "size": 84784
   }
  },
  "setup": {
-  "file": "releases/1.8.2/Starbond-1.8.2-setup.tar.gz",
-  "sha256": "4cbe3c45a5e0b761988b1f2485323f9818f8124c236ed72d09f1ec54f33e5fb3",
-  "size": 81797
+  "file": "releases/1.8.3/Starbond-1.8.3-setup.tar.gz",
+  "sha256": "6aa46c89419826f46004144715df5bf740c947c1c8e38fcaa1e6457a32f9c92a",
+  "size": 82124
  }
 }
