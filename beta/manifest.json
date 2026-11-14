@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.8.8",
+ "version": "1.8.9",
  "channel": "beta",
- "date": "2026-11-13T20:30:13",
- "notes": "- تطبيق موقوف: بتنمسح اتصالاته القائمة كمان (حتى اللي بالمسار السريع) فما بيضل ولا اتصال ماشي\n- عدّاد فعلي على باب الخروج: كم حزمة من التطبيق طلعت من الراوتر على كل خط",
+ "date": "2026-11-14T07:48:09",
+ "notes": "- لوحة التحكم: سعة الكبل (100 ميجا / 1 جيجا / 2.5 جيجا) تحت عدّاد كل خط وتحت الخرج، مع تنبيه إذا الكبل محدّد بـ 100",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.8.8/Starbond-1.8.8.tar.gz",
-   "sha256": "86a3c2fc0dae3d0139f9f8262ef0dcf30ae23b5977a7102bc152344a41e74b9d",
-   "size": 87269
+   "file": "releases/1.8.9/Starbond-1.8.9.tar.gz",
+   "sha256": "d341fa78722984e69953a79e845bfb79463c58c1c17663ca7f89eeb72cd6bc93",
+   "size": 88036
   }
  },
  "setup": {
-  "file": "releases/1.8.8/Starbond-1.8.8-setup.tar.gz",
-  "sha256": "c4b99e24d910fe5d2210a8e5bb303c0591469f85ba1f75aca8cba8d1037d3686",
-  "size": 84566
+  "file": "releases/1.8.9/Starbond-1.8.9-setup.tar.gz",
+  "sha256": "36aefe72f2322539cc71601053aeae4b949877af5efe035ffaa87ad342ef91e6",
+  "size": 85241
  }
 }
