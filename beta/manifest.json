@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.8.9",
+ "version": "1.9.0",
  "channel": "beta",
- "date": "2026-11-14T07:48:09",
- "notes": "- لوحة التحكم: سعة الكبل (100 ميجا / 1 جيجا / 2.5 جيجا) تحت عدّاد كل خط وتحت الخرج، مع تنبيه إذا الكبل محدّد بـ 100",
+ "date": "2026-11-15T20:01:31",
+ "notes": "- المعالج (CPU) ما عاد يطلع لـ 90% لما تفتح صفحة الأدوات والاتصالات كتيرة: قراية وحدة لجدول الاتصالات بنفس الوقت ونتيجة مشتركة لكل المتصفحات\n- الخط اللي كان ياخد حصة قليلة صار ياخد سرعته الحقيقية: نتيجة فحص السرعة صارت حد أدنى لسعة الخط",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.8.9/Starbond-1.8.9.tar.gz",
-   "sha256": "d341fa78722984e69953a79e845bfb79463c58c1c17663ca7f89eeb72cd6bc93",
-   "size": 88036
+   "file": "releases/1.9.0/Starbond-1.9.0.tar.gz",
+   "sha256": "402fcb1c2d90bdf514f5e34a1af3941b69bfcbd8aeeda5c2cdd195218c5b4c27",
+   "size": 89073
   }
  },
  "setup": {
-  "file": "releases/1.8.9/Starbond-1.8.9-setup.tar.gz",
-  "sha256": "36aefe72f2322539cc71601053aeae4b949877af5efe035ffaa87ad342ef91e6",
-  "size": 85241
+  "file": "releases/1.9.0/Starbond-1.9.0-setup.tar.gz",
+  "sha256": "d4217458cfb9c63b14c233c0d02673dde0fe06d38489c5fe236bbd1654e14506",
+  "size": 86265
  }
 }
