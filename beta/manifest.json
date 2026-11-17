@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.9.6",
+ "version": "1.9.7",
  "channel": "beta",
- "date": "2026-11-17T20:37:30",
- "notes": "- رجوع: انلغى توزيع معالجة الحزم على الأنوية (1.9.5) لأنه سبّب ضياع حزم مع PPPoE\n- (من 1.9.4) فحص السرعة ما عاد يخطف المنفذ 8080 و5060",
+ "date": "2026-11-17T22:36:54",
+ "notes": "- تطبيق جديد RouterX: كل الحركة لسيرفر RouterX (نفق WireGuard واللوحة) بتضل على خط واحد بتختاره، فالنفق ما بيفصل لما الاتصالات تتنقل بين الخطوط\n- (من 1.9.6) انلغى توزيع المعالجة على الأنوية لأنه سبّب ضياع حزم",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.9.6/Starbond-1.9.6.tar.gz",
-   "sha256": "f5e4423f3138302532bc820d6fe4daf2e9e48f70996ebf4bf2893cdcffc1fa45",
-   "size": 87982
+   "file": "releases/1.9.7/Starbond-1.9.7.tar.gz",
+   "sha256": "a6f7acb389f571671f27248a75ab14ebadefd023cea296b407d193a5b5d171bd",
+   "size": 88176
   }
  },
  "setup": {
-  "file": "releases/1.9.6/Starbond-1.9.6-setup.tar.gz",
-  "sha256": "24c2f429bd3416914848062bb22e25a61ba406001592e769a12ab097a665cff0",
-  "size": 84559
+  "file": "releases/1.9.7/Starbond-1.9.7-setup.tar.gz",
+  "sha256": "cc7dac2eb7025dcac69042cf273f012db1a5d36d4afba53e65216ac078cc12f3",
+  "size": 84768
  }
 }
