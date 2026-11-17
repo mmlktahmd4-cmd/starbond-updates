@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.9.5",
+ "version": "1.9.6",
  "channel": "beta",
- "date": "2026-11-17T20:32:35",
- "notes": "- معالجة الحزم صارت موزّعة على كل أنوية المعالج: قبل كانت كل حركة PPPoE على نواة وحدة (67%) والخط يوقف قبل سقفه، والنت يثقل وقت الضغط\n- (من 1.9.4) فحص السرعة ما عاد يخطف المنفذ 8080 و5060",
+ "date": "2026-11-17T20:37:30",
+ "notes": "- رجوع: انلغى توزيع معالجة الحزم على الأنوية (1.9.5) لأنه سبّب ضياع حزم مع PPPoE\n- (من 1.9.4) فحص السرعة ما عاد يخطف المنفذ 8080 و5060",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.9.5/Starbond-1.9.5.tar.gz",
-   "sha256": "c23e465dd2690beb48446dc91107bb8a39f710ded3d3f36ec7f36ec8e676614c",
-   "size": 88475
+   "file": "releases/1.9.6/Starbond-1.9.6.tar.gz",
+   "sha256": "f5e4423f3138302532bc820d6fe4daf2e9e48f70996ebf4bf2893cdcffc1fa45",
+   "size": 87982
   }
  },
  "setup": {
-  "file": "releases/1.9.5/Starbond-1.9.5-setup.tar.gz",
-  "sha256": "f3329517f574bdc1fc20ee0cf2daa24d67fbf51b1f8769895405db8ef4f7463b",
-  "size": 84970
+  "file": "releases/1.9.6/Starbond-1.9.6-setup.tar.gz",
+  "sha256": "24c2f429bd3416914848062bb22e25a61ba406001592e769a12ab097a665cff0",
+  "size": 84559
  }
 }
