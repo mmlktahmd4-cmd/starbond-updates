@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.9.3",
+ "version": "1.9.4",
  "channel": "beta",
- "date": "2026-11-17T19:26:48",
- "notes": "- الخط اللي بتطفيه من اللوحة صار يوقف فعلاً: قبل كانت واجهة أوبن ورت الأصلية (wan) ترجع تشتغل على منفذه وتسحب منه\n- (من 1.9.2) التوزيع ثابت حسب الأوزان اللي بتحددها إنت",
+ "date": "2026-11-17T20:21:37",
+ "notes": "- تطبيق فحص السرعة ما عاد يسحب كل اتصالات المنفذ 8080 و5060 لخطه (كانت لوحات وسيرفرات IP:8080 ومكالمات SIP تروح غلط)\n- (من 1.9.3) الخط المطفي بيوقف فعلاً\n- (من 1.9.2) التوزيع ثابت حسب الأوزان",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.9.3/Starbond-1.9.3.tar.gz",
-   "sha256": "3a1976dc6cab921793320d602634ef170b7cba683deb8665190b16ab3c10d97f",
-   "size": 87844
+   "file": "releases/1.9.4/Starbond-1.9.4.tar.gz",
+   "sha256": "20b9beed2d24c5e5775a2cb2ddfcecb60ce6a0b52e9c9828db89bb62a23f54be",
+   "size": 87843
   }
  },
  "setup": {
-  "file": "releases/1.9.3/Starbond-1.9.3-setup.tar.gz",
-  "sha256": "c5ee53809b74da1fa529586f2ce181201426ba5fb3bc3b0a0cc53c31ec2000d5",
+  "file": "releases/1.9.4/Starbond-1.9.4-setup.tar.gz",
+  "sha256": "aca26dd4d35f2e3a37edecbaf12f14ef8babd6e805cb84646c839bb7a93fb123",
   "size": 84556
  }
 }
