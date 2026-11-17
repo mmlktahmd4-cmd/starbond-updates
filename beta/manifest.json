@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.9.4",
+ "version": "1.9.5",
  "channel": "beta",
- "date": "2026-11-17T20:21:37",
- "notes": "- تطبيق فحص السرعة ما عاد يسحب كل اتصالات المنفذ 8080 و5060 لخطه (كانت لوحات وسيرفرات IP:8080 ومكالمات SIP تروح غلط)\n- (من 1.9.3) الخط المطفي بيوقف فعلاً\n- (من 1.9.2) التوزيع ثابت حسب الأوزان",
+ "date": "2026-11-17T20:32:35",
+ "notes": "- معالجة الحزم صارت موزّعة على كل أنوية المعالج: قبل كانت كل حركة PPPoE على نواة وحدة (67%) والخط يوقف قبل سقفه، والنت يثقل وقت الضغط\n- (من 1.9.4) فحص السرعة ما عاد يخطف المنفذ 8080 و5060",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.9.4/Starbond-1.9.4.tar.gz",
-   "sha256": "20b9beed2d24c5e5775a2cb2ddfcecb60ce6a0b52e9c9828db89bb62a23f54be",
-   "size": 87843
+   "file": "releases/1.9.5/Starbond-1.9.5.tar.gz",
+   "sha256": "c23e465dd2690beb48446dc91107bb8a39f710ded3d3f36ec7f36ec8e676614c",
+   "size": 88475
   }
  },
  "setup": {
-  "file": "releases/1.9.4/Starbond-1.9.4-setup.tar.gz",
-  "sha256": "aca26dd4d35f2e3a37edecbaf12f14ef8babd6e805cb84646c839bb7a93fb123",
-  "size": 84556
+  "file": "releases/1.9.5/Starbond-1.9.5-setup.tar.gz",
+  "sha256": "f3329517f574bdc1fc20ee0cf2daa24d67fbf51b1f8769895405db8ef4f7463b",
+  "size": 84970
  }
 }
