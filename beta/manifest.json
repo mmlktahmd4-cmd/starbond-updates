@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.9.8",
+ "version": "1.9.9",
  "channel": "beta",
- "date": "2026-11-17T23:09:24",
- "notes": "- اللوحة: شريط الترخيص الفاضي وشريط التحديث القديم ما عادوا يطلعوا (كانوا يضلّوا ظاهرين حتى لما يكونوا مخفيين)\n- عرض السرعات صار أهدى: متوسط 3 ثواني والأرقام بتتحدّث كل ثانية ونص",
+ "date": "2026-11-17T23:18:01",
+ "notes": "- عدّاد السرعة صار متل الميكروتيك: السرعة = حركة آخر ثانية، والرقم بيتحدّث مرة بالثانية وما بيتدحرج مع الإبرة",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.9.8/Starbond-1.9.8.tar.gz",
-   "sha256": "a333cad36efbae68883bfe0809a2c3408e611c33f5925219a9f2aff4c12408e1",
-   "size": 88439
+   "file": "releases/1.9.9/Starbond-1.9.9.tar.gz",
+   "sha256": "03d5d374a2abb3ba05a798de982922ddb1b0455ad0e6602c9f0f441081121d8e",
+   "size": 88550
   }
  },
  "setup": {
-  "file": "releases/1.9.8/Starbond-1.9.8-setup.tar.gz",
-  "sha256": "2d4f5ab9e0656ac3e72572e2ba259122263c5e9d219150034cb78135d207847b",
-  "size": 84934
+  "file": "releases/1.9.9/Starbond-1.9.9-setup.tar.gz",
+  "sha256": "e0ab84690b0db095a74d262936ca88f03d2e38e8966be2065df351be691b7ea2",
+  "size": 85039
  }
 }
