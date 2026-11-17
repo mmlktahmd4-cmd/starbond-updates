@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.9.7",
+ "version": "1.9.8",
  "channel": "beta",
- "date": "2026-11-17T22:36:54",
- "notes": "- تطبيق جديد RouterX: كل الحركة لسيرفر RouterX (نفق WireGuard واللوحة) بتضل على خط واحد بتختاره، فالنفق ما بيفصل لما الاتصالات تتنقل بين الخطوط\n- (من 1.9.6) انلغى توزيع المعالجة على الأنوية لأنه سبّب ضياع حزم",
+ "date": "2026-11-17T23:09:24",
+ "notes": "- اللوحة: شريط الترخيص الفاضي وشريط التحديث القديم ما عادوا يطلعوا (كانوا يضلّوا ظاهرين حتى لما يكونوا مخفيين)\n- عرض السرعات صار أهدى: متوسط 3 ثواني والأرقام بتتحدّث كل ثانية ونص",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.9.7/Starbond-1.9.7.tar.gz",
-   "sha256": "a6f7acb389f571671f27248a75ab14ebadefd023cea296b407d193a5b5d171bd",
-   "size": 88176
+   "file": "releases/1.9.8/Starbond-1.9.8.tar.gz",
+   "sha256": "a333cad36efbae68883bfe0809a2c3408e611c33f5925219a9f2aff4c12408e1",
+   "size": 88439
   }
  },
  "setup": {
-  "file": "releases/1.9.7/Starbond-1.9.7-setup.tar.gz",
-  "sha256": "cc7dac2eb7025dcac69042cf273f012db1a5d36d4afba53e65216ac078cc12f3",
-  "size": 84768
+  "file": "releases/1.9.8/Starbond-1.9.8-setup.tar.gz",
+  "sha256": "2d4f5ab9e0656ac3e72572e2ba259122263c5e9d219150034cb78135d207847b",
+  "size": 84934
  }
 }
