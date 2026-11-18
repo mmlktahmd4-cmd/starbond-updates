@@ -1,20 +1,20 @@
 {
  "product": "starbond",
- "version": "1.9.9",
+ "version": "1.9.10",
  "channel": "beta",
- "date": "2026-11-17T23:18:01",
- "notes": "- عدّاد السرعة صار متل الميكروتيك: السرعة = حركة آخر ثانية، والرقم بيتحدّث مرة بالثانية وما بيتدحرج مع الإبرة",
+ "date": "2026-11-18T14:57:07",
+ "notes": "- إصلاح مهم: جدول الاتصالات كان يمتلي (131 ألف) فالدمج يرمي كل اتصال جديد على الخطين ويطلعوا الاتنين مهبطين. الحد صار 524 ألف، والاتصال الخامل بيطلع من الجدول بعد ساعة بدل 24 ساعة، والمحاولات بلا رد بعد 30 ثانية\n- السجل صار 1MB وبدون ضجيج DHCP حتى ما تضيع الأحداث",
  "min_version": "",
  "files": {
   "default": {
-   "file": "releases/1.9.9/Starbond-1.9.9.tar.gz",
-   "sha256": "03d5d374a2abb3ba05a798de982922ddb1b0455ad0e6602c9f0f441081121d8e",
-   "size": 88550
+   "file": "releases/1.9.10/Starbond-1.9.10.tar.gz",
+   "sha256": "3e826d1868b7dd0dedbf28e44f9de29e8ed3840034b0b7d85563863fdc4d17d0",
+   "size": 89166
   }
  },
  "setup": {
-  "file": "releases/1.9.9/Starbond-1.9.9-setup.tar.gz",
-  "sha256": "e0ab84690b0db095a74d262936ca88f03d2e38e8966be2065df351be691b7ea2",
-  "size": 85039
+  "file": "releases/1.9.10/Starbond-1.9.10-setup.tar.gz",
+  "sha256": "864b34f3d763fdaad0c64daa5fe6b21df2c1ef41b152d89b0cd4f28c8705e539",
+  "size": 85409
  }
 }
